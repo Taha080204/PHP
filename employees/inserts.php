@@ -31,7 +31,7 @@ if(isset($_POST['Add'])){
     <title>Document</title>
 </head>
 <body>
-<div class="container my_4">
+<div  class="container my_4">
  <h1 class="text-center">Enter Employees Details</h1>
  <form action="" method="post" class="form-group">
   <input type="text" name="name" id="" class="form-control my-2" placeholder="Enter Employee Name">
