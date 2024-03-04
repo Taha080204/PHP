@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "root";
 $db_pass ="";
-$db_name ="office";
+$db_name ="jobapplication";
 
 $connection = mysqli_connect($server, $username, $db_pass,
 $db_name);

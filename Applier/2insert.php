@@ -5,10 +5,11 @@ if(isset($_POST['Add'])){
 
     $name = $_POST['name'];
     $age = $_POST['age']; 
-    $city = $_POST['city'];  
+    $gender = $_POST['gender'];  
     $qualification = $_POST['qualification'];  
+    $expectedsalary = $_POST['expectedsalary'];  
 
-    $insert = "INSERT INTO `Employees` (`Name`, `Age`, `City`, `Qualification`) VALUES ('$name', '$age', '$city', '$qualification')";
+    $insert = "INSERT INTO `Appliers` (`Name`, `Age`, `Gender`, `Qualification`,`Expected Salary`) VALUES ('$name', '$age', '$gender', '$qualification', '$expectedsalary')";
     $result = mysqli_query($connection, $insert);
 
     if ($result){
@@ -46,13 +47,30 @@ if(isset($_POST['Add'])){
                             <label for="age" class="form-label">Employee Age</label>
                             <input type="number" name="age" id="age" class="form-control" placeholder="Enter Employee Age">
                         </div>
+                        
                         <div class="mb-3">
-                            <label for="city" class="form-label">Employee City</label>
-                            <input type="text" name="city" id="city" class="form-control" placeholder="Enter Employee City">
+    <label for="gender" class="form-label">Employee Gender</label>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+        <label class="form-check-label" for="male">
+            Male
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+        <label class="form-check-label" for="female">
+            Female
+        </label>
+    </div>
+</div>
+
+                        <div class="mb-3">
+                            <label for="Qualification" class="form-label">Enter Employees Qualification</label>
+                            <input type="text" name="qualification" id="qualification" class="form-control" placeholder="Qualification">
                         </div>
                         <div class="mb-3">
-                            <label for="qualification" class="form-label">Employee Qualification</label>
-                            <input type="text" name="qualification" id="qualification" class="form-control" placeholder="Enter Employee Qualification">
+                            <label for="Expectedsalary" class="form-label">Expected Salary</label>
+                            <input type="text" name="expectedsalary" id="expectedsalary" class="form-control" placeholder="Expected Salary">
                         </div>
                         <div class="mb-3">
                             <input type="submit" name="Add" id="Add" class="btn btn-primary form-control" value="Add Employee">
